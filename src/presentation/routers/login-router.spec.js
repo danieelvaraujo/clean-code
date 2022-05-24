@@ -22,7 +22,7 @@ const makeSut = () => {
 
 describe('Login Router', () => {
   test('Should return 200 when valid credentials are provided', () => {
-    const { sut } = makeSut()
+    const { sut, authUseCaseSpy } = makeSut()
 
     const httpRequest = {
       body: {
@@ -30,8 +30,9 @@ describe('Login Router', () => {
         password: 'valid_password'
       }
     }
-    const httepResponse = sut.route(httpRequest)
-    expect(httepResponse.statusCode).toBe(200)
+    const httpResponse = sut.route(httpRequest)
+    expect(httpResponse.statusCode).toBe(200)
+    expect(httpResponse.body.accessToken).toEqual(authUseCaseSpy.accessToken)
   })
 
   test('Should return 401 when invalid credentials are provided', () => {
