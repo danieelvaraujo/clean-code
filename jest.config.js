@@ -1,4 +1,3 @@
 module.exports = {
-  collectCoverage: true,
-  coverageDirectory: 'coverage'
+  collectCoverage: false
 }
