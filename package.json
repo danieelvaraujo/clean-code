@@ -13,8 +13,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "npm run test:staged",
-      "git add"
+      "npm run test:staged"
     ]
   },
   "author": "",
