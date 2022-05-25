@@ -12,7 +12,9 @@
     "prepare": "husky install"
   },
   "standard": {
-    "env": ["jest"]
+    "env": [
+      "jest"
+    ]
   },
   "lint-staged": {
     "*.js": [
@@ -28,5 +30,8 @@
     "jest": "^28.1.0",
     "lint-staged": "^12.4.1",
     "standard": "^17.0.0"
+  },
+  "dependencies": {
+    "validator": "^13.7.0"
   }
 }
