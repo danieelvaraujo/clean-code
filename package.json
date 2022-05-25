@@ -11,14 +11,8 @@
     "test:ci": "npm test -- --coverage",
     "prepare": "husky install"
   },
-  "standard": {
-    "env": [
-      "jest"
-    ]
-  },
   "lint-staged": {
     "*.js": [
-      "standard --fix",
       "npm run test:staged",
       "git add"
     ]
@@ -28,10 +22,10 @@
   "devDependencies": {
     "husky": "^8.0.1",
     "jest": "^28.1.0",
-    "lint-staged": "^12.4.1",
-    "standard": "^17.0.0"
+    "lint-staged": "^12.4.1"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "validator": "^13.7.0"
   }
 }
